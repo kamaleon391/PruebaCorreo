@@ -2,7 +2,8 @@
     require 'Mailin.php';
     require 'conexion.php';
 
-    $mensaje="<h1>Titulo del mensaje</h1>
+    $mensaje="<meta charset='utf8' />
+    <h1>Título del mensaje</h1>
     <style>
       body{
         font-family: Century gothic;
@@ -69,7 +70,7 @@
         </tr>
         <tr>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>
-          <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>Ref. Energetica</td>";
+          <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>Ref. Energética</td>";
 
           $mensaje .= "
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >&nbsp;</td>
@@ -89,7 +90,7 @@
         </tr>
         <tr>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>
-          <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>Petroleo</td>";
+          <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>Petróleo</td>";
 
           $mensaje .= "
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >&nbsp;</td>
@@ -109,7 +110,7 @@
         </tr>
         <tr>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>
-          <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>Petroquimica</td>";
+          <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>Petroquímica</td>";
 
          $mensaje .= "
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >&nbsp;</td>
@@ -149,7 +150,7 @@
         </tr>
         <tr>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>
-          <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>Refinacion</td>";
+          <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>Refinación</td>";
 
           $mensaje .= "
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >&nbsp;</td>
