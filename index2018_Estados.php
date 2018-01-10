@@ -3,7 +3,6 @@
     require 'conexion.php';
 
     $mensaje="<p>Hola</p> <br/>mundo";
-    $asunto="Mensaje de prueba";
 
     sendinblue($mensaje);
     function sendinblue($message){
@@ -21,7 +20,7 @@
                 "ehb1703@gmail.com" => "Edgar Hernandez",
             ),
             "from" => array("gaimpresos@gmail.com", "Ga Comunicacion"),
-            "subject" =>$asunto,
+            "subject" =>$subject,
             "html" => $message,
             "headers" => array("Content-Type"=> "text/html; charset=UTF-8", "X-Mailin-Tag" => "Impresos")
         );
