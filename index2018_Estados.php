@@ -2,7 +2,6 @@
     require 'Mailin.php';
     require 'conexion.php';
 
-    $fecha=  date("Y-m-d");
     $mensaje="<style>
       body{
         font-family: Century gothic;
