@@ -108,7 +108,7 @@
         </tr>
         <tr>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>
-          <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>".utf8_decode('Petroquímica')."</td>";
+          <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>Petroquimica</td>";
 
          $mensaje .= "
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >&nbsp;</td>
@@ -148,7 +148,7 @@
         </tr>
         <tr>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>
-          <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>".utf8_decode('Refinación')."</td>";
+          <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>Refinacion</td>";
 
           $mensaje .= "
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >&nbsp;</td>
