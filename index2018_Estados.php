@@ -3,7 +3,6 @@
     require 'conexion.php';
 
     $mensaje="<meta charset='utf8' />
-    <h1>Título del mensaje</h1>
     <style>
       body{
         font-family: Century gothic;
