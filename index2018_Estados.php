@@ -17,7 +17,7 @@
       <tr>
         <tr>
           <td width='3%'>&nbsp;</td>
-          <td colspan='5'><img src='Logo.jpg' style='width:400px;'></td>
+          <td colspan='5'><img src='http://187.247.253.5/external/services/mail/pemex/Logo.jpg' style='width:400px;'></td>
           <td width='3%'>&nbsp;</td>
         </tr>
         <tr>
