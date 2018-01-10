@@ -224,13 +224,13 @@
             $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);' ><a href='http://187.247.253.5/external/services/mail/pemex/exportpemex.php?p=".base64_encode(base64_encode('17'))."&f=$fecha'>".utf8_decode('Clic aquí')."</a></td>";
           else
             $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>";
-
-          $mensaje .= "
         </tr>
 
         <td colspan='7' style='text-align: right;'><span style='text-align: right;
           font-size: 8px;
           color: rgb(139, 139, 139);'>Monitoreo de prensa 2018</span></td>
+
+          $mensaje = "
       </tr>
     </table>
     <br><br>
