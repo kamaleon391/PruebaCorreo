@@ -13,7 +13,7 @@
         border-bottom: 1pt solid black;
       }
     </style>
-    <table width='150px' align='center' cellspacing='0' border='0' style="font-size: 13px; border: solid 1px gray">
+    <table width='150px' align='center' cellspacing='0' border='0' style='font-size: 13px; border: solid 1px gray'>
       <tr>
         <tr>
           <td width='3%'>&nbsp;</td>
