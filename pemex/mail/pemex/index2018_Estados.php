@@ -1,6 +1,6 @@
 <?php
-    require "/var/www/external/services/mail/library/Mailin.php";
-    require '/var/www/external/services/mail/conexion.php';
+    require "/var/www/PruebaCorreo/pemex/mail/library/Mailin.php";
+    require '/var/www/PruebaCorreo/pemex/mail/conexion.php';
     require 'querysPEMEX.php';
 
     $fecha=  date("Y-m-d");
