@@ -1,0 +1,66 @@
+<div style="font-weight: bold;margin-left:15px;">ledex11.php</div><link rel="stylesheet" href="../phphl.css" type="text/css"><div class="hl-main"><table class="hl-table" width="100%"><tr><td class="hl-gutter" align="right" valign="top"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="hl-main" valign="top"><pre><span class="hl-inlinetags">&lt;?php</span><span class="hl-code"> </span><span class="hl-comment">//</span><span class="hl-comment"> content=&quot;text/plain; charset=utf-8&quot;</span><span class="hl-comment"></span><span class="hl-code">
+ 
+</span><span class="hl-reserved">require_once</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">jpgraph/jpgraph.php</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-reserved">require_once</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">jpgraph/jpgraph_led.php</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">;
+ 
+</span><span class="hl-comment">//</span><span class="hl-comment"> By default each &quot;LED&quot; circle has a radius of 3 pixels</span><span class="hl-comment"></span><span class="hl-code">
+</span><span class="hl-var">$led</span><span class="hl-code"> = </span><span class="hl-reserved">new</span><span class="hl-code"> </span><span class="hl-identifier">DigitalLED74</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-var">$led</span><span class="hl-code">-&gt;</span><span class="hl-identifier">StrokeNumber</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">0123456789. ABCDEFGHIJKL</span><span class="hl-quotes">'</span><span class="hl-code">,</span><span class="hl-identifier">LEDC_OLIVE</span><span class="hl-brackets">)</span><span class="hl-code">;
+ 
+ 
+ 
+</span><span class="hl-inlinetags">?&gt;</span></pre></td></tr></table></div>
+>$aVal</span><span class="hl-code">*</span><span class="hl-number">9</span><span class="hl-code">/</span><span class="hl-number">5</span><span class="hl-brackets">)</span><span class="hl-code">+</span><span class="hl-number">32</span><span class="hl-code">,</span><span class="hl-number">2</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span><span class="hl-code">
+ 
+</span><span class="hl-reserved">function</span><span class="hl-code"> </span><span class="hl-identifier">toCelcius</span><span class="hl-brackets">(</span><span class="hl-var">$aVal</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-reserved">return</span><span class="hl-code"> </span><span class="hl-identifier">round</span><span class="hl-brackets">(</span><span class="hl-brackets">(</span><span class="hl-var">$aVal</span><span class="hl-code">-</span><span class="hl-number">32</span><span class="hl-brackets">)</span><span class="hl-code">*</span><span class="hl-number">5</span><span class="hl-code">/</span><span class="hl-number">9</span><span class="hl-code">,</span><span class="hl-number">2</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span><span class="hl-code">
+ 
+ 
+</span><span class="hl-var">$datay</span><span class="hl-code"> =</span><span class="hl-reserved">array</span><span class="hl-brackets">(</span><span class="hl-number">2</span><span class="hl-code">,</span><span class="hl-number">3</span><span class="hl-code">,</span><span class="hl-number">8</span><span class="hl-code">,</span><span class="hl-number">19</span><span class="hl-code">,</span><span class="hl-number">7</span><span class="hl-code">,</span><span class="hl-number">17</span><span class="hl-code">,</span><span class="hl-number">6</span><span class="hl-code">,</span><span class="hl-number">22</span><span class="hl-brackets">)</span><span class="hl-code">;
+ 
+</span><span class="hl-comment">//</span><span class="hl-comment"> Create the graph. </span><span class="hl-comment"></span><span class="hl-code">
+</span><span class="hl-var">$graph</span><span class="hl-code"> = </span><span class="hl-reserved">new</span><span class="hl-code"> </span><span class="hl-identifier">Graph</span><span class="hl-brackets">(</span><span class="hl-number">400</span><span class="hl-code">,</span><span class="hl-number">280</span><span class="hl-brackets">)</span><span class="hl-code">;
+ 
+</span><span class="hl-comment">//</span><span class="hl-comment"> Slightly bigger margins than default to make room for titles</span><span class="hl-comment"></span><span class="hl-code">
+</span><span class="hl-var">$graph</span><span class="hl-code">-&gt;</span><span class="hl-identifier">SetMargin</span><span class="hl-brackets">(</span><span class="hl-number">50</span><span class="hl-code">,</span><span class="hl-number">60</span><span class="hl-code">,</span><span class="hl-number">40</span><span class="hl-code">,</span><span class="hl-number">45</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-var">$graph</span><span class="hl-code">-&gt;</span><span class="hl-identifier">SetMarginColor</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">white</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">;
+ 
+ 
+</span><span class="hl-comment">//</span><span class="hl-comment"> Setup the scales for X,Y and Y2 axis</span><span class="hl-comment"></span><span class="hl-code">
+</span><span class="hl-var">$graph</span><span class="hl-code">-&gt;</span><span class="hl-identifier">SetScale</span><span class="hl-brackets">(</span><span class="hl-quotes">&quot;</span><span class="hl-string">intlin</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">)</span><span class="hl-code">; </span><span class="hl-comment">//</span><span class="hl-comment"> X and Y axis</span><span class="hl-comment"></span><span class="hl-code">
+</span><span class="hl-var">$graph</span><span class="hl-code">-&gt;</span><span class="hl-identifier">SetY2Scale</span><span class="hl-brackets">(</span><span class="hl-quotes">&quot;</span><span class="hl-string">lin</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">)</span><span class="hl-code">; </span><span class="hl-comment">//</span><span class="hl-comment"> Y2 axis</span><span class="hl-comment"></span><span class="hl-code">
+ 
+</span><span class="hl-comment">//</span><span class="hl-comment"> Overall graph title</span><span class="hl-comment"></span><span class="hl-code">
+</span><span class="hl-var">$graph</span><span class="hl-code">-&gt;</span><span class="hl-identifier">title</span><span class="hl-code">-&gt;</span><span class="hl-identifier">Set</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">Synchronized Y &amp; Y2 scales</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-var">$graph</span><span class="hl-code">-&gt;</span><span class="hl-identifier">title</span><span class="hl-code">-&gt;</span><span class="hl-identifier">SetFont</span><span class="hl-brackets">(</span><span class="hl-identifier">FF_ARIAL</span><span class="hl-code">,</span><span class="hl-identifier">FS_BOLD</span><span class="hl-code">,</span><span class="hl-number">12</span><span class="hl-brackets">)</span><span class="hl-code">;
+ 
+</span><span class="hl-comment">//</span><span class="hl-comment"> Title for X-axis</span><span class="hl-comment"></span><span class="hl-code">
+</span><span class="hl-var">$graph</span><span class="hl-code">-&gt;</span><span class="hl-identifier">xaxis</span><span class="hl-code">-&gt;</span><span class="hl-identifier">title</span><span class="hl-code">-&gt;</span><span class="hl-identifier">Set</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">Measurement</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-var">$graph</span><span class="hl-code">-&gt;</span><span class="hl-identifier">xaxis</span><span class="hl-code">-&gt;</span><span class="hl-identifier">title</span><span class="hl-code">-&gt;</span><span class="hl-identifier">SetMargin</span><span class="hl-brackets">(</span><span class="hl-number">5</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-var">$graph</span><span class="hl-code">-&gt;</span><span class="hl-identifier">xaxis</span><span class="hl-code">-&gt;</span><span class="hl-identifier">title</span><span class="hl-code">-&gt;</span><span class="hl-identifier">SetFont</span><span class="hl-brackets">(</span><span class="hl-identifier">FF_ARIAL</span><span class="hl-code">,</span><span class="hl-identifier">FS_NORMAL</span><span class="hl-code">,</span><span class="hl-number">11</span><span class="hl-brackets">)</span><span class="hl-code">;
+ 
+</span><span class="hl-comment">//</span><span class="hl-comment"> Create Y data set </span><span class="hl-comment"></span><span class="hl-code">
+</span><span class="hl-var">$lplot</span><span class="hl-code"> = </span><span class="hl-reserved">new</span><span class="hl-code"> </span><span class="hl-identifier">LinePlot</span><span class="hl-brackets">(</span><span class="hl-var">$datay</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-var">$graph</span><span class="hl-code">-&gt;</span><span class="hl-identifier">yaxis</span><span class="hl-code">-&gt;</span><span class="hl-identifier">title</span><span class="hl-code">-&gt;</span><span class="hl-identifier">Set</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">Celcius (C)</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-var">$graph</span><span class="hl-code">-&gt;</span><span class="hl-identifier">yaxis</span><span class="hl-code">-&gt;</span><span class="hl-identifier">title</span><span class="hl-code">-&gt;</span><span class="hl-identifier">SetMargin</span><span class="hl-brackets">(</span><span class="hl-number">5</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-var">$graph</span><span class="hl-code">-&gt;</span><span class="hl-identifier">yaxis</span><span class="hl-code">-&gt;</span><span class="hl-identifier">title</span><span class="hl-code">-&gt;</span><span class="hl-identifier">SetFont</span><span class="hl-brackets">(</span><span class="hl-identifier">FF_ARIAL</span><span class="hl-code">,</span><span class="hl-identifier">FS_NORMAL</span><span class="hl-code">,</span><span class="hl-number">11</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-comment">//</span><span class="hl-comment"> ... and add the plot to the Y-axis</span><span class="hl-comment"></span><span class="hl-code">
+</span><span class="hl-var">$graph</span><span class="hl-code">-&gt;</span><span class="hl-identifier">Add</span><span class="hl-brackets">(</span><span class="hl-var">$lplot</span><span class="hl-brackets">)</span><span class="hl-code">;
+ 
+</span><span class="hl-comment">//</span><span class="hl-comment"> Create Y2 scale data set </span><span class="hl-comment"></span><span class="hl-code">
+</span><span class="hl-var">$l2plot</span><span class="hl-code"> = </span><span class="hl-reserved">new</span><span class="hl-code"> </span><span class="hl-identifier">LinePlot</span><span class="hl-brackets">(</span><span class="hl-var">$datay</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-var">$l2plot</span><span class="hl-code">-&gt;</span><span class="hl-

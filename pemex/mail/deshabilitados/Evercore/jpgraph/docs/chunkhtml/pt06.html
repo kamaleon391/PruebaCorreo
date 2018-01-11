@@ -1,0 +1,150 @@
+           around each individual odometer. The amount of space is adjusted by the method </p>
+            <p>OdoPlot::SetMargin($aMargin)</p>
+            <p>If we take the example in <a class="xref" href="ch20s02.html#fig.odotutex07" title="Figure 20.8. Illustration of various sizes of arrow heads (odotutex07.php)">Figure 20.8. Illustration of various sizes of arrow heads <code class="uri"><a class="uri" href="example_src/odotutex07.html" target="_top">(<code class="filename">odotutex07.php</code>)</a></code> </a> and increase the
+                individual margin around all odometers they will become smaller (if we keep the
+                original image size) and the result is shown in <a class="xref" href="ch20s02.html#fig.odotutex09" title="Figure 20.10. Increasing the individual margins around the plots (odotutex09.php)">Figure 20.10. Increasing the individual margins around the plots <code class="uri"><a class="uri" href="example_src/odotutex09.html" target="_top">(<code class="filename">odotutex09.php</code>)</a></code> </a></p>
+            <p>
+                </p><div class="figure"><a name="fig.odotutex09"></a><p class="title"><b>Figure 20.10. Increasing the individual margins around the plots <code class="uri"><a class="uri" href="example_src/odotutex09.html" target="_top">(<code class="filename">odotutex09.php</code>)</a></code> </b></p><div class="figure-contents">  <span class="inlinemediaobject"><img src="images/odotutex09.png" alt="Increasing the individual margins around the plots (odotutex09.php)"></span> </div></div><p><br class="figure-break">
+            </p>
+        </div>
+        <div class="sect2" title="Adding color indications in the scale"><div class="titlepage"><div><div><h3 class="title"><a name="id2584673"></a>Adding color indications in the scale</h3></div></div></div>
+            
+            <p>An odometer usually have some colored markings to indicate safe and dangerous
+                values. The library allows the addition of any number of colored scale areas with
+                one or several calls to the method</p>
+            <p>
+                </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+                        <p><code class="code">OdoPlot::AddIndication($aMin,$aMax,$aColor)</code></p>
+                    </li></ul></div><p>
+            </p>
+            <p>This method allows the specification of a min and max value of the scale which
+                will be given the background color specified as the third parameter.</p>
+            <p>The example in <a class="xref" href="ch20s02.html#fig.odotutex10" title="Figure 20.11. Adding colored scale indicators (odotutex10.php)">Figure 20.11. Adding colored scale indicators <code class="uri"><a class="uri" href="example_src/odotutex10.html" target="_top">(<code class="filename">odotutex10.php</code>)</a></code> </a> adds three different scale
+                area with 6 different scale areas</p>
+            <p>
+                </p><div class="figure"><a name="fig.odotutex10"></a><p class="title"><b>Figure 20.11. Adding colored scale indicators <code class="uri"><a class="uri" href="example_src/odotutex10.html" target="_top">(<code class="filename">odotutex10.php</code>)</a></code> </b></p><div class="figure-contents">  <span class="inlinemediaobject"><img src="images/odotutex10.png" alt="Adding colored scale indicators (odotutex10.php)"></span> </div></div><p><br class="figure-break">
+            </p>
+        </div>
+        <div class="sect2" title="Changing size of the non-colored center area"><div class="titlepage"><div><div><h3 class="title"><a name="id2584762"></a>Changing size of the non-colored center area</h3></div></div></div>
+            
+            <p>In <a class="xref" href="ch20s02.html#fig.odotutex10" title="Figure 20.11. Adding colored scale indicators (odotutex10.php)">Figure 20.11. Adding colored scale indicators <code class="uri"><a class="uri" href="example_src/odotutex10.html" target="_top">(<code class="filename">odotutex10.php</code>)</a></code> </a> it can be seen that by default the scale
+                color indication goes all the way down to the base of the needle. It is however
+                possible to adjust this to the colored area stops a bit above the base of the
+                needle. The non colored area is adjusted with a call to the method</p>
+            <p>
+                </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+                        <p><code class="code">OdoPlot::SetCenterAreaWidth($aWidth)</code></p>
+                        <p>The width is specified as a fraction of the radius of the plot.</p>
+                    </li></ul></div><p>
+            </p>
+            <p>The following example in <a class="xref" href="ch20s02.html#fig.odotutex11" title="Figure 20.12. Adjusting the non-colored center area (odotutex11.php)">Figure 20.12. Adjusting the non-colored center area <code class="uri"><a class="uri" href="example_src/odotutex11.html" target="_top">(<code class="filename">odotutex11.php</code>)</a></code> </a>set the size of this
+                base area to be 45% of the plot radius.</p>
+            <p>
+                </p><div class="figure"><a name="fig.odotutex11"></a><p class="title"><b>Figure 20.12. Adjusting the non-colored center area <code class="uri"><a class="uri" href="example_src/odotutex11.html" target="_top">(<code class="filename">odotutex11.php</code>)</a></code> </b></p><div class="figure-contents">  <span class="inlinemediaobject"><img src="images/odotutex11.png" alt="Adjusting the non-colored center area (odotutex11.php)"></span> </div></div><p><br class="figure-break">
+            </p>
+        </div>
+        <div class="sect2" title="Using multiple indicator needles in one odometer"><div class="titlepage"><div><div><h3 class="title"><a name="id2584870"></a>Using multiple indicator needles in one odometer</h3></div></div></div>
+            
+            <p>In all the previous example the odometer plots have all had a single indicator. It
+                is however possible to add up to four indicators to each plot. This could for
+                example be sued to show the current value and a sliding 3-day average.</p>
+            <p>The extra needles are accessed through the properties </p>
+            <p>
+                </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+                        <p><code class="code">OdoPlot::needle2</code></p>
+                    </li><li class="listitem">
+                        <p><code class="code">OdoPlot::needle3</code></p>
+                    </li><li class="listitem">
+                        <p><code class="code">OdoPlot::needle4</code></p>
+                    </li></ul></div><p>
+            </p>
+            <p>In order to enable one of these extra needles the method OdoNeedle::Show() has to
+                be called. The value of the indicator can then be set as the following example
+                shows.</p>
+            <p>
+                </p><div class="hl-main"><table class="hl-table" width="100%"><tr><td class="hl-gutter" align="right" valign="top"><pre>1
+2
+</pre></td><td class="hl-main" valign="top"><pre><span class="hl-code">$odo-&gt;needle2-&gt;Show();
+$odo-&gt;needle2-&gt;Set(44);</span></pre></td></tr></table></div><p>
+            </p>
+            <p>By default all the needles will have the same color so the color should be
+                manually changed to be able to differentiate among multiple needles. The example in
+                    <a class="xref" href="ch20s02.html#fig.odotutex12" title="Figure 20.13. Adding a second scale indicator (odotutex12.php)">Figure 20.13. Adding a second scale indicator <code class="uri"><a class="uri" href="example_src/odotutex12.html" target="_top">(<code class="filename">odotutex12.php</code>)</a></code> </a> shows an example of this where we also have
+                made the second indicator a bit shorter to further make it easier to read.</p>
+            <p>
+                </p><div class="figure"><a name="fig.odotutex12"></a><p class="title"><b>Figure 20.13. Adding a second scale indicator <code class="uri"><a class="uri" href="example_src/odotutex12.html" target="_top">(<code class="filename">odotutex12.php</code>)</a></code> </b></p><div class="figure-contents">  <span class="inlinemediaobject"><img src="images/odotutex12.png" alt="Adding a second scale indicator (odotutex12.php)"></span> </div></div><p><br class="figure-break">
+            </p>
+        </div>
+        <div class="sect2" title="Adding an odometer legend (label)"><div class="titlepage"><div><div><h3 class="title"><a name="id2584953"></a>Adding an odometer legend (label)</h3></div></div></div>
+            
+            <p>Most types of odometers have a legend in the middle of the meter usually
+                indicating what the scale shows. The odometer have a specific text property to add
+                text in that position.</p>
+            <p>
+                </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+                        <p><code class="code">OdoPlot::label</code></p>
+                    </li></ul></div><p>
+            </p>
+            <p>The following code adds the label "mBar" as the scale indicator and also adjusts
+                the default font</p>
+            <p>
+                </p><div class="hl-main"><table class="hl-table" width="100%"><tr><td class="hl-gutter" align="right" valign="top"><pre>1
+2
+</pre></td><td class="hl-main" valign="top"><pre><span class="hl-code">$odo-&gt;label-&gt;Set(&quot;mBar&quot;);
+$odo-&gt;label-&gt;SetFont(FF_FONT2,FS_BOLD);</span></pre></td></tr></table></div><p>
+            </p>
+            <p>The result of this cane be seen in <a class="xref" href="ch20s02.html#fig.odotutex13" title="Figure 20.14. Adding a scale legend by using the label property (odotutex13.php)">Figure 20.14. Adding a scale legend by using the label property <code class="uri"><a class="uri" href="example_src/odotutex13.html" target="_top">(<code class="filename">odotutex13.php</code>)</a></code> </a></p>
+            <p>
+                </p><div class="figure"><a name="fig.odotutex13"></a><p class="title"><b>Figure 20.14. Adding a scale legend by using the label property <code class="uri"><a class="uri" href="example_src/odotutex13.html" target="_top">(<code class="filename">odotutex13.php</code>)</a></code> </b></p><div class="figure-contents">  <span class="inlinemediaobject"><img src="images/odotutex13.png" alt="Adding a scale legend by using the label property (odotutex13.php)"></span> </div></div><p><br class="figure-break">
+            </p>
+        </div>
+        <div class="sect2" title="Adjusting the width and color of the odometer frame (border)"><div class="titlepage"><div><div><h3 class="title"><a name="id2585069"></a>Adjusting the width and color of the odometer frame (border)</h3></div></div></div>
+            
+            <p>The border of the odometer plot can be adjusted with a call to</p>
+            <p>
+                </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+                        <p><code class="code">OdoPlot::SetBorder($aColor,$aWidth=1)</code></p>
+                    </li></ul></div><p>
+            </p>
+            <p>The following example shows the effect of making the odometer plot border
+                thicker</p>
+            <p>
+                </p><div class="hl-main"><table class="hl-table" width="100%"><tr><td class="hl-gutter" align="right" valign="top"><pre>1
+</pre></td><td class="hl-main" valign="top"><pre><span class="hl-code">&quot;=odotutex08.1|Adding a thicker border around the odometer plot&quot;</span></pre></td></tr></table></div><p>
+            </p>
+        </div>
+    </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"> </td><td width="20%" align="center"><a accesskey="u" href="ch20.html">Up</a></td><td width="40%" align="right"> </td></tr><tr><td width="40%" align="left" valign="top"> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> </td></tr></table></div></body></html>
+lfway into the plot area</p>
+            <p>
+                </p><div class="hl-main"><table class="hl-table" width="100%"><tr><td class="hl-gutter" align="right" valign="top"><pre>1
+</pre></td><td class="hl-main" valign="top"><pre><span class="hl-code">$odo-&gt;needle-&gt;SetLength(0.5);</span></pre></td></tr></table></div><p>
+            </p>
+            <p>The default size for a needles is 60% of the radius. </p>
+            <p></p>
+        </div>
+        <div class="sect2" title="Adding drop shadows"><div class="titlepage"><div><div><h3 class="title"><a name="id2584050"></a>Adding drop shadows</h3></div></div></div>
+            
+            <p>It is possible to add drop shadows to both the overall graph s well as the
+                indicator needle. To add a drop shadow to the overall graph the method is as
+                usual</p>
+            <p>
+                </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+                        <p><code class="code">OdoGraph::SetShadow($aShadow=true,$aColor="gray@0.5",$aDx=4,$aDy=4)</code></p>
+                    </li></ul></div><p>
+            </p>
+            <p>and to add a drop shadow to the indicator needle the method</p>
+            <p>
+                </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+                        <p><code class="code">OdoNeedle::SetShadow($aShadow=true,$aColor="gray@0.5",$aDx=4,$aDy=4)</code></p>
+                    </li></ul></div><p>
+            </p>
+            <p>must be used.</p>
+            <p>The following two lines add both types of drop shadows to an odometer graph with
+                the result shown in ??</p>
+            <p>
+                </p><div class="hl-main"><table class="hl-table" width="100%"><tr><td class="hl-gutter" align="right" valign="top"><pre>1
+2
+3
+4
+5
+</pre></td><td class="hl-main" valign="top"><pre><span class="hl-i

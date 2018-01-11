@@ -1,0 +1,90 @@
+<div style="font-weight: bold;margin-left:15px;">ledex5.php</div><link rel="stylesheet" href="../phphl.css" type="text/css"><div class="hl-main"><table class="hl-table" width="100%"><tr><td class="hl-gutter" align="right" valign="top"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="hl-main" valign="top"><pre><span class="hl-inlinetags">&lt;?php</span><span class="hl-code"> </span><span class="hl-comment">//</span><span class="hl-comment"> content=&quot;text/plain; charset=utf-8&quot;</span><span class="hl-comment"></span><span class="hl-code">
+ 
+</span><span class="hl-reserved">require_once</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">jpgraph/jpgraph.php</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-reserved">require_once</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">jpgraph/jpgraph_led.php</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">;
+ 
+</span><span class="hl-comment">//</span><span class="hl-comment"> By default each &quot;LED&quot; circle has a radius of 3 pixels</span><span class="hl-comment"></span><span class="hl-code">
+</span><span class="hl-var">$led</span><span class="hl-code"> = </span><span class="hl-reserved">new</span><span class="hl-code"> </span><span class="hl-identifier">DigitalLED74</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-var">$led</span><span class="hl-code">-&gt;</span><span class="hl-identifier">StrokeNumber</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">0123456789. ABCDEFGHIJKL</span><span class="hl-quotes">'</span><span class="hl-code">,</span><span class="hl-identifier">LEDC_BLUE</span><span class="hl-brackets">)</span><span class="hl-code">;
+ 
+ 
+ 
+</span><span class="hl-inlinetags">?&gt;</span></pre></td></tr></table></div>
+an><span class="hl-comment"></span><span class="hl-code">
+</span><span class="hl-var">$height</span><span class="hl-code"> = </span><span class="hl-number">2</span><span class="hl-code">;    </span><span class="hl-comment">//</span><span class="hl-comment"> Height factor (=2)</span><span class="hl-comment"></span><span class="hl-code">
+</span><span class="hl-var">$showtext</span><span class="hl-code"> = </span><span class="hl-reserved">true</span><span class="hl-code">;  </span><span class="hl-comment">//</span><span class="hl-comment"> Show human readable string</span><span class="hl-comment"></span><span class="hl-code">
+ 
+</span><span class="hl-reserved">try</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-comment">//</span><span class="hl-comment"> Create a new encoder and backend to generate PNG images</span><span class="hl-comment"></span><span class="hl-code">
+    </span><span class="hl-var">$encoder</span><span class="hl-code"> = </span><span class="hl-reserved">new</span><span class="hl-code"> </span><span class="hl-identifier">PDF417Barcode</span><span class="hl-brackets">(</span><span class="hl-var">$columns</span><span class="hl-code">,</span><span class="hl-var">$errlevel</span><span class="hl-brackets">)</span><span class="hl-code">;
+    </span><span class="hl-var">$backend</span><span class="hl-code"> = </span><span class="hl-identifier">PDF417BackendFactory</span><span class="hl-code">::</span><span class="hl-identifier">Create</span><span class="hl-brackets">(</span><span class="hl-identifier">BACKEND_IMAGE</span><span class="hl-code">,</span><span class="hl-var">$encoder</span><span class="hl-brackets">)</span><span class="hl-code">;
+ 
+    </span><span class="hl-var">$backend</span><span class="hl-code">-&gt;</span><span class="hl-identifier">SetModuleWidth</span><span class="hl-brackets">(</span><span class="hl-var">$modwidth</span><span class="hl-brackets">)</span><span class="hl-code">;
+    </span><span class="hl-var">$backend</span><span class="hl-code">-&gt;</span><span class="hl-identifier">SetHeight</span><span class="hl-brackets">(</span><span class="hl-var">$height</span><span class="hl-brackets">)</span><span class="hl-code">;
+    </span><span class="hl-var">$backend</span><span class="hl-code">-&gt;</span><span class="hl-identifier">NoText</span><span class="hl-brackets">(</span><span class="hl-code">!</span><span class="hl-var">$showtext</span><span class="hl-brackets">)</span><span class="hl-code">;
+    </span><span class="hl-var">$backend</span><span class="hl-code">-&gt;</span><span class="hl-identifier">SetColor</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">black</span><span class="hl-quotes">'</span><span class="hl-code">,</span><span class="hl-quotes">'</span><span class="hl-string">yellow</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">;
+    </span><span class="hl-var">$backend</span><span class="hl-code">-&gt;</span><span class="hl-identifier">Stroke</span><span class="hl-brackets">(</span><span class="hl-var">$data</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span><span class="hl-code">
+</span><span class="hl-reserved">catch</span><span class="hl-brackets">(</span><span class="hl-identifier">JpGraphException</span><span class="hl-code"> </span><span class="hl-var">$e</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-reserved">echo</span><span class="hl-code"> </span><span class="hl-quotes">'</span><span class="hl-string">PDF417 Error: </span><span class="hl-quotes">'</span><span class="hl-code">.</span><span class="hl-var">$e</span><span class="hl-code">-&gt;</span><span class="hl-identifier">GetMessage</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span><span class="hl-code">
+</span><span class="hl-inlinetags">?&gt;</span></pre></td></tr></table></div>
+;</span><span class="hl-identifier">Set</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">&quot;BGIMG_FILLPLOT&quot;</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-var">$graph</span><span class="hl-code">-&gt;</span><span class="hl-identifier">subtitle</span><span class="hl-code">-&gt;</span><span class="hl-identifier">SetColor</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">darkred</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">;
+ 
+</span><span class="hl-comment">//</span><span class="hl-comment"> Add background with 25% mix</span><span class="hl-comment"></span><span class="hl-code">
+</span><span class="hl-var">$graph</span><span class="hl-code">-&gt;</span><span class="hl-identifier">SetBackgroundImage</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">heat1.jpg</span><span class="hl-quotes">'</span><span class="hl-code">,</span><span class="hl-identifier">BGIMG_FILLPLOT</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-var">$graph</span><span class="hl-code">-&gt;</span><span class="hl-identifier">SetBackgroundImageMix</span><span class="hl-brackets">(</span><span class="hl-number">25</span><span class="hl-brackets">)</span><span class="hl-code">;
+ 
+</span><span class="hl-comment">//</span><span class="hl-comment"> Create the linear plot</span><span class="hl-comment"></span><span class="hl-code">
+</span><span class="hl-var">$lineplot</span><span class="hl-code">=</span><span class="hl-reserved">new</span><span class="hl-code"> </span><span class="hl-identifier">LinePlot</span><span class="hl-brackets">(</span><span class="hl-var">$ydata</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-var">$lineplot</span><span class="hl-code">-&gt;</span><span class="hl-identifier">SetColor</span><span class="hl-brackets">(</span><span class="hl-quotes">&quot;</span><span class="hl-string">blue</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">)</span><span class="hl-code">;
+ 
+</span><span class="hl-comment">//</span><span class="hl-comment"> Add the plot to the graph</span><span class="hl-comment"></span><span class="hl-code">
+</span><span class="hl-var">$graph</span><span class="hl-code">-&gt;</span><span class="hl-identifier">Add</span><span class="hl-brackets">(</span><span class="hl-var">$lineplot</span><span class="hl-brackets">)</span><span class="hl-code">;
+ 
+</span><span class="hl-comment">//</span><span class="hl-comment"> Display the graph</span><span class="hl-comment"></span><span class="hl-code">
+</span><span class="hl-var">$graph</span><span class="hl-code">-&gt;</span><span class="hl-identifier">Stroke</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-inlinetags">?&gt;</span></pre></td></tr></table></div>
+pan><span class="hl-comment">//</span><span class="hl-comment"> Display the labels</span><span class="hl-comment"></span><span class="hl-code">
+</span><span class="hl-var">$cp</span><span class="hl-code">-&gt;</span><span class="hl-identifier">ShowLabels</span><span class="hl-brackets">(</span><span class="hl-reserved">true</span><span class="hl-code">,</span><span class="hl-reserved">false</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-var">$cp</span><span class="hl-code">-&gt;</span><span class="hl-identifier">SetFont</span><span class="hl-brackets">(</span><span class="hl-identifier">FF_ARIAL</span><span class="hl-code">,</span><span class="hl-identifier">FS_BOLD</span><span class="hl-code">,</span><span class="hl-number">9</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-var">$cp</span><span class="hl-code">-&gt;</span><span class="hl-identifier">SetFontColor</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">white</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">;
+ 
+</span><span class="hl-comment">//</span><span class="hl-comment"> And add the plot to the graph</span><span class="hl-comment"></span><span class="hl-code">
+</span><span class="hl-var">$graph</span><span class="hl-code">-&gt;</span><span class="hl-identifier">Add</span><span class="hl-brackets">(</span><span class="hl-var">$cp</span><span class="hl-brackets">)</span><span class="hl-code">;
+ 
+</span><span class="hl-comment">//</span><span class="hl-comment"> Send it back to the client</span><span class="hl-comment"></span><span class="hl-code">
+</span><span class="hl-var">$graph</span><span class="hl-code">-&gt;</span><span class="hl-identifier">stroke</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">;
+ 
+</span><span class="hl-inlinetags">?&gt;</span></pre></td></tr></table></div>
+>
+                                    </td><td>
+                                        <p>
+                                            </p><div class="figure"><a name="fig.rotex4"></a><p class="title"><b>Figure 14.78. Rotating the plot area 90 degrees <code class="uri"><a class="uri" href="example_src/rotex4.html" target="_top">(<code class="filename">rotex4.php</code>)</a></code> </b></p><div class="figure-contents">  <span class="inlinemediaobject"><img src="images/rotex4.png" alt="Rotating the plot area 90 degrees (rotex4.php)"></span> </div></div><p><br class="figure-break">
+                                        </p>
+                                    </td></tr></tbody></table>
+                    </div><p>
+                </p>
+                <p>As a final example in <a class="xref" href="ch14s12.html#fig.rotex5" title="Figure 14.79. Rotating the plot area -30 degree around the bottom left corner (rotex5.php)">Figure 14.79. Rotating the plot area -30 degree around the bottom left corner <code class="uri"><a class="uri" href="example_src/rotex5.html" target="_top">(<code class="filename">rotex5.php</code>)</a></code> </a> we show the result of
+                    rotating the plot area -30 degree around the bottom left point in the
+                    graph</p>
+                <p>
+                    </p><div class="figure"><a name="fig.rotex5"></a><p class="title"><b>Figure 14.79. Rotating the plot area -30 degree around the bottom left corner <code class="uri"><a class="uri" href="example_src/rotex5.html" target="_top">(<code class="filename">rotex5.php</code>)</a></code> </b></p><div class="figure-contents">  <span class="inlinemediaobject"><img src="images/rotex5.png" alt="Rotating the plot area -30 degree around the bottom left corner (rotex5.php)"></span> </div></div><p><br class="figure-break">
+                </p>
+            </div>
+            <div class="sect2" title="Rotating the plot area 90 degree"><div class="titlepage"><div><div><h3 class="title"><a name="id2551820"></a>Rotating the plot area 90 degree</h3></div></div></div>
+                
+                <p>As can be seen above in <a class="xref" href="ch14s12.html#fig.rotex2" title="Figure 14.76. Rotating the plot area 90 degrees (rotex2.php)">Figure 14.76. Rotating the plot area 90 degrees <code class="uri"><a class="uri" href="example_src/rotex2.html" target="_top">(<code class="filename">rotex2.php</code>)</a></code> </a> and <a class="xref" href="ch14s12.htm
