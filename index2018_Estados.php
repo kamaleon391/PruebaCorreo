@@ -38,11 +38,16 @@
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >&nbsp;</td>
           <td width='49%' style='border-bottom: 1pt solid rgb(230, 230, 230);'> Dir. General</td>";
 
-          if(numberNotes(5, $fecha))
-            $mensaje .= "<td width='25%'  style='border-bottom: 1pt solid rgb(230, 230, 230);'><a href='http://187.247.253.5/PruebaCorreo/pemex/exportpemex1.php?p=
-            base64_encode(base64_encode('5')) &f=$fecha>Clic aquí</a></td>";
-          else
-            $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>";
+
+
+    "<div style='text-align: center; font-size: 14px;'>Para mas contenido visite su <a href='http://www.gaimpresos.com/boards/corpogas'>Sistema de Informacion</a></div>";
+
+
+
+        if(numberNotes(5, $fecha))
+          $mensaje .= "<td width='25%'  style='border-bottom: 1pt solid rgb(230, 230, 230);'><a href='http://187.247.253.5/external/services/mail/pemex/exportpemex.php?p=".base64_encode(base64_encode('5'))."&f=$fecha'>".utf8_decode('Clic aquí')."</a></td>";
+        else
+          $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>";
 
          $mensaje .= "
           <td width='6%' style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>
@@ -53,6 +58,11 @@
         <tr>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>PEMEX</td>";
+
+        if(numberNotes(6, $fecha))
+          $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);' ><a href='http://187.247.253.5/external/services/mail/pemex/exportpemex.php?p=".base64_encode(base64_encode('6'))."&f=$fecha'>".utf8_decode('Clic aquí')."</a></td>";
+        else
+          $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>";          
 
           $mensaje .= "
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >&nbsp;</td>
