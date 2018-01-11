@@ -47,47 +47,47 @@ if(isset($_GET['p']) && isset($_GET['f'])){
              $tema=utf8_decode("Ref. Energética - Estados");$subtema=" ";
              ArmaPdf($query,$tema,$subtema);
         break;
-        
+
         case 9:
              $tema=utf8_decode("Instalaciones - Estados");$subtema=" ";
              ArmaPdf($query,$tema,$subtema);
         break;
-        
+
         case 10: //Petroleo - Estados
              $tema=utf8_decode("Petróleo - Estados");$subtema=" ";
              ArmaPdf($query,$tema,$subtema);
         break;
-        
+
         case 11: //GAS - Estados
              $tema=utf8_decode("Gas - Estados");$subtema=" ";
              ArmaPdf($query,$tema,$subtema);
         break;
-        
+
         case 12: //Petroquímico - Estados
              $tema=utf8_decode("Petroquímica - Estados");$subtema=" ";
              ArmaPdf($query,$tema,$subtema);
         break;
-        
+
         case 13: //Gasolina - Estados
              $tema=utf8_decode("Gasolina - Estados");$subtema=" ";
              ArmaPdf($query,$tema,$subtema);
         break;
-        
+
         case 14: //Reforma Laboral - Estados
              $tema=utf8_decode("Reforma Laboral - Estados");$subtema=" ";
              ArmaPdf($query,$tema,$subtema);
         break;
-        
+
         case 15: //Reforma Laboral - Estados
              $tema=utf8_decode("Sindicato - Estados");$subtema=" ";
              ArmaPdf($query,$tema,$subtema);
         break;
-        
+
         case 16: //Reforma Laboral - Estados
              $tema=utf8_decode("Refinación - Estados");$subtema=" ";
              ArmaPdf($query,$tema,$subtema);
         break;
-        
+
         case 17: //Seguridad Industrial - Estados
              $tema=utf8_decode("Seguridad Industrial - Estados");$subtema=" ";
              ArmaPdf($query,$tema,$subtema);
@@ -100,7 +100,7 @@ else{
 }
 function ArmaPdf($query,$tema,$subtema){
 require_once('../fpdf17/fpdf.php');
-require_once('../FPDI-1.4.4/fpdi.php');
+require_once('../FPDI-1.4.4/fpdi9.php');
 
 $pdf = new FPDI('P','mm','A4');
 require '../conexion.php';
