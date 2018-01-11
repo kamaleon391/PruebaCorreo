@@ -1,7 +1,9 @@
 <?php
     require 'Mailin.php';
     require 'conexion.php';
+    require 'querysPEMEX.php';
 
+    $fecha=  date("Y-m-d");
     $mensaje="<meta charset='utf8' />
     <style>
       body{
@@ -35,6 +37,11 @@
         <tr>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >&nbsp;</td>
           <td width='49%' style='border-bottom: 1pt solid rgb(230, 230, 230);'> Dir. General</td>";
+
+          if(numberNotes(5, $fecha))
+            $mensaje .= "<td width='25%'  style='border-bottom: 1pt solid rgb(230, 230, 230);'><a href='http://187.247.253.5/external/services/mail/pemex/exportpemex.php?p=".base64_encode(base64_encode('5'))."&f=$fecha'>".'Clic aquí'."</a></td>";
+          else
+            $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>";
 
          $mensaje .= "
           <td width='6%' style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>
@@ -194,5 +201,5 @@
          * ENVIANDO EMAIL...
          */
         var_dump($mailin->send_email($data));
-    }
+    }   
 ?>
