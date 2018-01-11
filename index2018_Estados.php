@@ -39,9 +39,8 @@
           <td width='49%' style='border-bottom: 1pt solid rgb(230, 230, 230);'> Dir. General</td>";
 
           if(numberNotes(5, $fecha))
-
-            $mensaje .= "<td width='25%'  style='border-bottom: 1pt solid rgb(230, 230, 230);'><a href='http://187.247.253.5/PruebaCorreo/pemex/exportpemex1.php?p=". 
-            "base64_encode(base64_encode('5'))" . "&f=$fecha'>" . "Clic aquí" . "</a></td>";
+            $mensaje .= "<td width='25%'  style='border-bottom: 1pt solid rgb(230, 230, 230);'><a href='http://187.247.253.5/PruebaCorreo/pemex/exportpemex1.php?p=
+            base64_encode(base64_encode('5')) &f=$fecha>Clic aquí</a></td>";
           else
             $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>";
 
