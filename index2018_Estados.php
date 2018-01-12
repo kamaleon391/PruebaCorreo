@@ -14,7 +14,12 @@
         border-bottom: 1pt solid black;
       }
     </style>
-    <table width='150px' align='center' cellspacing='0' border='0' style='font-size: 13px; border: solid 1px gray'>
+    <table width='400px' align='center' cellspacing='0' border='0' style='font-size: 13px;border: solid 1px gray;'>
+      <tr>
+        <td width='3%'>&nbsp;</td>
+        <td colspan='5'><img src='http://187.247.253.5/external/services/mail/pemex/Logo.jpg' style='width:400px;'></td>
+        <td width='3%'>&nbsp;</td>
+      </tr>    
       <tr>
         <tr>
           <td>&nbsp;</td>
@@ -37,11 +42,6 @@
         <tr>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >&nbsp;</td>
           <td width='49%' style='border-bottom: 1pt solid rgb(230, 230, 230);'> Dir. General</td>";
-
-
-
-    "<div style='text-align: center; font-size: 14px;'>Para mas contenido visite su <a href='http://www.gaimpresos.com/boards/corpogas'>Sistema de Informacion</a></div>";
-
 
 
         if(numberNotes(5, $fecha))
@@ -183,7 +183,7 @@
       </tr>
     </table>
     <br><br>
-    <div style='text-align: center; font-size: 14px;'>Para mas contenido visite su <a href='http://www.gaimpresos.com/boards/corpogas'>Sistema de Informacion</a></div>";
+    <div style='text-align: center; font-size: 14px;'>Para mas contenido visite su <a href='http://www.gaimpresos.com/boards/corpogas'>Sistema de Información</a></div>";
 
     echo $mensaje."<br><br>";
 
