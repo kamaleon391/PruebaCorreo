@@ -248,7 +248,7 @@
         $mailin = new Mailin("https://api.sendinblue.com/v2.0", "wjSbMAENLm2TGfpW");
         $data   = array(
             "to" => array(
-                  "kamaleon391@gmail.com" => "Correo de prueba",
+                  "kamaleon391@gmail.com" => "Correo de prueba con tabla",
             ),
             "cc" => array(
                 "ehb1703@me.com"=>"Edgar Hernandez",
