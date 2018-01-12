@@ -38,12 +38,6 @@
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >&nbsp;</td>
           <td width='49%' style='border-bottom: 1pt solid rgb(230, 230, 230);'> Dir. General</td>";
 
-
-
-    "<div style='text-align: center; font-size: 14px;'>Para mas contenido visite su <a href='http://www.gaimpresos.com/boards/corpogas'>Sistema de Informacion</a></div>";
-
-
-
         if(numberNotes(5, $fecha))
           $mensaje .= "<td width='25%'  style='border-bottom: 1pt solid rgb(230, 230, 230);'><a href='http://187.247.253.5/external/services/mail/pemex/exportpemex.php?p=".base64_encode(base64_encode('5'))."&f=$fecha'>".utf8_decode('Clic aquí')."</a></td>";
         else
