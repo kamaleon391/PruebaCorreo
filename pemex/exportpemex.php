@@ -1,109 +1,109 @@
 <?php
 
 if(isset($_GET['p']) && isset($_GET['f'])){
-    include './querysPEMEX.php';
-     // $fecha=base64_decode(base64_decode($_GET['f']));
-       $valor=base64_decode(base64_decode($_GET['p']));
-       $query=query($valor, $_GET['f']);
-      //$tabla=defineFecha($fecha);
+  include './querysPEMEX.php';
+   // $fecha=base64_decode(base64_decode($_GET['f']));
+     $valor=base64_decode(base64_decode($_GET['p']));
+     $query=query($valor, $_GET['f']);
+    //$tabla=defineFecha($fecha);
 
-    switch ($valor) {
-        case 1: // PRIMERAS PLANAS
-             $tema="PRIMERAS PLANAS";$subtema=" ";
-             ArmaPdf($query,$tema,$subtema);
-        break;
+  switch ($valor) {
+      case 1: // PRIMERAS PLANAS
+           $tema="PRIMERAS PLANAS";$subtema=" ";
+           ArmaPdf($query,$tema,$subtema);
+      break;
 
-        case 2:
-             $tema=utf8_decode("COLUMNAS POLÍTICAS");$subtema=" ";
-             ArmaPdfColumnas($query,$tema,$subtema);
-        break;
+      case 2:
+           $tema=utf8_decode("COLUMNAS POLÍTICAS");$subtema=" ";
+           ArmaPdfColumnas($query,$tema,$subtema);
+      break;
 
-        case 3:
-             $tema="COLUMNAS FINANCIERAS";$subtema=" ";
-             ArmaPdfColumnas($query,$tema,$subtema);
-        break;
+      case 3:
+           $tema="COLUMNAS FINANCIERAS";$subtema=" ";
+           ArmaPdfColumnas($query,$tema,$subtema);
+      break;
 
-        case 4:
-             $tema="CARTONES";$subtema=" ";
-             ArmaPdfColumnas($query,$tema,$subtema);
-        break;
+      case 4:
+           $tema="CARTONES";$subtema=" ";
+           ArmaPdfColumnas($query,$tema,$subtema);
+      break;
 
-        case 5:
-             $tema=utf8_decode("Director General - Estados");$subtema=" ";
-             ArmaPdf($query,$tema,$subtema);
-        break;
+      case 5:
+           $tema=utf8_decode("Director General - Estados");$subtema=" ";
+           ArmaPdf($query,$tema,$subtema);
+      break;
 
-        case 6: //PEMEX
-             $tema=utf8_decode("PEMEX - Estados");$subtema="";
-             ArmaPdf($query,$tema,$subtema);
-        break;
+      case 6: //PEMEX
+           $tema=utf8_decode("PEMEX - Estados");$subtema="";
+           ArmaPdf($query,$tema,$subtema);
+      break;
 
-        case 7:
-             $tema=utf8_decode("Admon. Central - Estados");$subtema=" ";
-             ArmaPdf($query,$tema,$subtema);
-        break;
+      case 7:
+           $tema=utf8_decode("Admon. Central - Estados");$subtema=" ";
+           ArmaPdf($query,$tema,$subtema);
+      break;
 
-        case 8:
-             $tema=utf8_decode("Ref. Energética - Estados");$subtema=" ";
-             ArmaPdf($query,$tema,$subtema);
-        break;
+      case 8:
+           $tema=utf8_decode("Ref. Energética - Estados");$subtema=" ";
+           ArmaPdf($query,$tema,$subtema);
+      break;
 
-        case 9:
-             $tema=utf8_decode("Instalaciones - Estados");$subtema=" ";
-             ArmaPdf($query,$tema,$subtema);
-        break;
+      case 9:
+           $tema=utf8_decode("Instalaciones - Estados");$subtema=" ";
+           ArmaPdf($query,$tema,$subtema);
+      break;
 
-        case 10: //Petroleo - Estados
-             $tema=utf8_decode("Petróleo - Estados");$subtema=" ";
-             ArmaPdf($query,$tema,$subtema);
-        break;
+      case 10: //Petroleo - Estados
+           $tema=utf8_decode("Petróleo - Estados");$subtema=" ";
+           ArmaPdf($query,$tema,$subtema);
+      break;
 
-        case 11: //GAS - Estados
-             $tema=utf8_decode("Gas - Estados");$subtema=" ";
-             ArmaPdf($query,$tema,$subtema);
-        break;
+      case 11: //GAS - Estados
+           $tema=utf8_decode("Gas - Estados");$subtema=" ";
+           ArmaPdf($query,$tema,$subtema);
+      break;
 
-        case 12: //Petroquímico - Estados
-             $tema=utf8_decode("Petroquímica - Estados");$subtema=" ";
-             ArmaPdf($query,$tema,$subtema);
-        break;
+      case 12: //Petroquímico - Estados
+           $tema=utf8_decode("Petroquímica - Estados");$subtema=" ";
+           ArmaPdf($query,$tema,$subtema);
+      break;
 
-        case 13: //Gasolina - Estados
-             $tema=utf8_decode("Gasolina - Estados");$subtema=" ";
-             ArmaPdf($query,$tema,$subtema);
-        break;
+      case 13: //Gasolina - Estados
+           $tema=utf8_decode("Gasolina - Estados");$subtema=" ";
+           ArmaPdf($query,$tema,$subtema);
+      break;
 
-        case 14: //Reforma Laboral - Estados
-             $tema=utf8_decode("Reforma Laboral - Estados");$subtema=" ";
-             ArmaPdf($query,$tema,$subtema);
-        break;
+      case 14: //Reforma Laboral - Estados
+           $tema=utf8_decode("Reforma Laboral - Estados");$subtema=" ";
+           ArmaPdf($query,$tema,$subtema);
+      break;
 
-        case 15: //Reforma Laboral - Estados
-             $tema=utf8_decode("Sindicato - Estados");$subtema=" ";
-             ArmaPdf($query,$tema,$subtema);
-        break;
+      case 15: //Reforma Laboral - Estados
+           $tema=utf8_decode("Sindicato - Estados");$subtema=" ";
+           ArmaPdf($query,$tema,$subtema);
+      break;
 
-        case 16: //Reforma Laboral - Estados
-             $tema=utf8_decode("Refinación - Estados");$subtema=" ";
-             ArmaPdf($query,$tema,$subtema);
-        break;
+      case 16: //Reforma Laboral - Estados
+           $tema=utf8_decode("Refinación - Estados");$subtema=" ";
+           ArmaPdf($query,$tema,$subtema);
+      break;
 
-        case 17: //Seguridad Industrial - Estados
-             $tema=utf8_decode("Seguridad Industrial - Estados");$subtema=" ";
-             ArmaPdf($query,$tema,$subtema);
-        break;
-}
+      case 17: //Seguridad Industrial - Estados
+           $tema=utf8_decode("Seguridad Industrial - Estados");$subtema=" ";
+           ArmaPdf($query,$tema,$subtema);
+      break;
+  }
 
 }
 else{
 
 }
 function ArmaPdf($query,$tema,$subtema){
-require_once('../fpdf17/fpdf.php');
-require_once('../FPDI-1.4.4/fpdi9.php');
+  require_once('../fpdf17/fpdf.php');
+  require_once('../FPDI-1.4.4/fpdi9.php');
 
-$pdf = new FPDI('P','mm','A4');
-require '../conexion.php';
+  $pdf = new FPDI('P','mm','A4');
+  require '../conexion.php';
 
 
     $data=  mysql_query($query);

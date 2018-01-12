@@ -73,6 +73,11 @@
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>Admon. Central</td>";
 
+        if(numberNotes(7, $fecha))
+          $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);' ><a href='http://187.247.253.5/external/services/mail/pemex/exportpemex.php?p=".base64_encode(base64_encode('7'))."&f=$fecha'>".utf8_decode('Clic aquí')."</a></td>";
+        else
+          $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>";          
+
           $mensaje .= "
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >&nbsp;</td>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >&nbsp;</td>
@@ -82,6 +87,11 @@
         <tr>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>Ref. Energética</td>";
+
+        if(numberNotes(8, $fecha))
+          $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);' ><a href='http://187.247.253.5/external/services/mail/pemex/exportpemex.php?p=".base64_encode(base64_encode('8'))."&f=$fecha'>".utf8_decode('Clic aquí')."</a></td>";
+        else
+          $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>";
 
           $mensaje .= "
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >&nbsp;</td>
@@ -93,6 +103,11 @@
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>Instalaciones</td>";
 
+        if(numberNotes(9, $fecha))
+          $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);' ><a href='http://187.247.253.5/external/services/mail/pemex/exportpemex.php?p=".base64_encode(base64_encode('9'))."&f=$fecha'>".utf8_decode('Clic aquí')."</a></td>";
+        else
+          $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>";          
+
           $mensaje .= "
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >&nbsp;</td>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >&nbsp;</td>
@@ -102,6 +117,11 @@
         <tr>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>Petróleo</td>";
+
+        if(numberNotes(10, $fecha))
+          $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);' ><a href='http://187.247.253.5/external/services/mail/pemex/exportpemex.php?p=".base64_encode(base64_encode('10'))."&f=$fecha'>".utf8_decode('Clic aquí')."</a></td>";
+        else
+          $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>";          
 
           $mensaje .= "
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >&nbsp;</td>
@@ -113,6 +133,11 @@
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>Gas</td>";
 
+        if(numberNotes(11, $fecha))
+          $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);' ><a href='http://187.247.253.5/external/services/mail/pemex/exportpemex.php?p=".base64_encode(base64_encode('11'))."&f=$fecha'>".utf8_decode('Clic aquí')."</a></td>";
+        else
+          $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>";          
+
           $mensaje .= "
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >&nbsp;</td>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >&nbsp;</td>
@@ -122,6 +147,11 @@
         <tr>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>Petroquímica</td>";
+
+        if(numberNotes(12, $fecha))
+          $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);' ><a href='http://187.247.253.5/external/services/mail/pemex/exportpemex.php?p=".base64_encode(base64_encode('12'))."&f=$fecha'>".utf8_decode('Clic aquí')."</a></td>";
+        else
+          $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>";          
 
          $mensaje .= "
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >&nbsp;</td>
@@ -133,6 +163,11 @@
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>Gasolina</td>";
 
+        if(numberNotes(13, $fecha))
+          $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);' ><a href='http://187.247.253.5/external/services/mail/pemex/exportpemex.php?p=".base64_encode(base64_encode('13'))."&f=$fecha'>".utf8_decode('Clic aquí')."</a></td>";
+        else
+          $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>";          
+
           $mensaje .= "
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >&nbsp;</td>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >&nbsp;</td>
@@ -142,6 +177,11 @@
         <tr>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>Ref. Laboral</td>";
+
+        if(numberNotes(14, $fecha))
+          $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);' ><a href='http://187.247.253.5/external/services/mail/pemex/exportpemex.php?p=".base64_encode(base64_encode('14'))."&f=$fecha'>".utf8_decode('Clic aquí')."</a></td>";
+        else
+          $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>";          
 
           $mensaje .= "
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >&nbsp;</td>
@@ -153,6 +193,11 @@
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>Sindicato</td>";
 
+        if(numberNotes(15, $fecha))
+          $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);' ><a href='http://187.247.253.5/external/services/mail/pemex/exportpemex.php?p=".base64_encode(base64_encode('15'))."&f=$fecha'>".utf8_decode('Clic aquí')."</a></td>";
+        else
+          $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>";          
+
           $mensaje .= "
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >&nbsp;</td>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >&nbsp;</td>
@@ -163,6 +208,11 @@
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>Refinación</td>";
 
+        if(numberNotes(16, $fecha))
+          $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);' ><a href='http://187.247.253.5/external/services/mail/pemex/exportpemex.php?p=".base64_encode(base64_encode('16'))."&f=$fecha'>".utf8_decode('Clic aquí')."</a></td>";
+        else
+          $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>";          
+
           $mensaje .= "
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >&nbsp;</td>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >&nbsp;</td>
@@ -172,6 +222,11 @@
         <tr>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>Seguridad Industrial</td>";
+
+        if(numberNotes(17, $fecha))
+          $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);' ><a href='http://187.247.253.5/external/services/mail/pemex/exportpemex.php?p=".base64_encode(base64_encode('17'))."&f=$fecha'>".utf8_decode('Clic aquí')."</a></td>";
+        else
+          $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>";          
 
           $mensaje .= "
         </tr>
