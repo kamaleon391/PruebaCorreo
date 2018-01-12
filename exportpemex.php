@@ -1,7 +1,7 @@
 <?php
 
 if(isset($_GET['p']) && isset($_GET['f'])){
-    include 'C:\xampp\htdocs\external\mail\pemex\querysPEMEX.php';
+    include 'querysPEMEX.php';
       $fecha=base64_decode(base64_decode($_GET['f']));
        $valor=base64_decode(base64_decode($_GET['p']));
        $query=query($valor, $_GET['f']);
@@ -99,11 +99,11 @@ else{
 
 }
 function ArmaPdf($query,$tema,$subtema){
-require_once('..\fpdf17\fpdf.php');
-require_once('..\FPDI-1.4.4\fpdi.php');
+require_once('../fpdf17/fpdf.php');
+require_once('../FPDI-1.4.4/fpdi.php');
 
 $pdf = new FPDI('P','mm','A4');
-require '..\conexion.php';
+require '/conexion.php';
 
 
     $data=  mysql_query($query);
@@ -188,11 +188,11 @@ require '..\conexion.php';
 }
 
 function ArmaPdfColumnas($query,$tema,$subtema){
-require_once('..\fpdf17\fpdf.php');
-require_once('..\FPDI-1.4.4\fpdi.php');
+require_once('../fpdf17/fpdf.php');
+require_once('../FPDI-1.4.4/fpdi.php');
 
 $pdf = new FPDI('P','mm','legal');
-     require '..\conexion.php';
+     require 'conexion.php';
 
 
     $data=  mysql_query($query);
