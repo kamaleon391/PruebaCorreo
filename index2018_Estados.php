@@ -17,6 +17,11 @@
     <table width='150px' align='center' cellspacing='0' border='0' style='font-size: 13px; border: solid 1px gray'>
       <tr>
         <tr>
+          <td width='3%'>&nbsp;</td>
+          <td colspan='5'><img src='http://187.247.253.5/external/services/mail/pemex/Logo.jpg' style='width:400px;'></td>
+          <td width='3%'>&nbsp;</td>
+        </tr>      
+        <tr>
           <td>&nbsp;</td>
           <td>&nbsp;</td>
           <td>&nbsp;</td>
@@ -177,7 +182,7 @@
       </tr>
     </table>
     <br><br>
-    <div style='text-align: center; font-size: 14px;'>Para mas contenido visite su <a href='http://www.gaimpresos.com/boards/corpogas'>Sistema de Informacion</a></div>";
+    <div style='text-align: center; font-size: 14px;'>Para mas contenido visite su <a href='http://www.gaimpresos.com/boards/corpogas'>Sistema de Información</a></div>";
 
     echo $mensaje."<br><br>";
 
