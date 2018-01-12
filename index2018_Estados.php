@@ -1,7 +1,7 @@
 <?php
-    require "/var/www/external/services/mail/library/Mailin.php";
-    require '/var/www/external/services/mail/conexion.php';
-    require 'querysPEMEX.php';
+    require 'Mailin.php';
+    require 'conexion.php';
+    require 'pemex/querysPEMEX.php';
 
     $fecha=  date("Y-m-d");
     $mensaje="<meta charset='utf8' />
