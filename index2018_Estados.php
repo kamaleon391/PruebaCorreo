@@ -14,11 +14,10 @@
         border-bottom: 1pt solid black;
       }
     </style>
-    <table width='150px' align='center' cellspacing='0' border='0' style='font-size: 13px; border: solid 1px gray'>
+    <table width='400px' align='center' cellspacing='0' border='0' style='font-size: 13px;border: solid 1px gray;'>
       <tr>
         <tr>
           <td width='3%'>&nbsp;</td>
-          <td colspan='5'><img src='http://187.247.253.5/external/services/mail/pemex/Logo.jpg' style='width:400px;'></td>
           <td width='3%'>&nbsp;</td>
         </tr>      
         <tr>
@@ -146,7 +145,7 @@
         </tr>
         <tr>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>
-          <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>Petroquímica</td>";
+          <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>".utf8_decode('Petroquímica')."</td>";
 
         if(numberNotes(12, $fecha))
           $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);' ><a href='http://187.247.253.5/external/services/mail/pemex/exportpemex.php?p=".base64_encode(base64_encode('12'))."&f=$fecha'>".utf8_decode('Clic aquí')."</a></td>";
@@ -206,7 +205,7 @@
         </tr>
         <tr>
           <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>&nbsp;</td>
-          <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>Refinación</td>";
+          <td style='border-bottom: 1pt solid rgb(230, 230, 230);'>".utf8_decode('Refinación')."</td>";
 
         if(numberNotes(16, $fecha))
           $mensaje .= "<td style='border-bottom: 1pt solid rgb(230, 230, 230);' ><a href='http://187.247.253.5/external/services/mail/pemex/exportpemex.php?p=".base64_encode(base64_encode('16'))."&f=$fecha'>".utf8_decode('Clic aquí')."</a></td>";
@@ -237,7 +236,7 @@
       </tr>
     </table>
     <br><br>
-    <div style='text-align: center; font-size: 14px;'>Para mas contenido visite su <a href='http://www.gaimpresos.com/boards/corpogas'>Sistema de Información</a></div>";
+    <div style='text-align: center; font-size: 14px;'>Para más contenido visite su <a href='http://www.gaimpresos.com/boards/corpogas'>Sistema de Información</a></div>";
 
     echo $mensaje."<br><br>";
 
@@ -259,7 +258,7 @@
             "from" => array("gaimpresos@gmail.com", "Ga Comunicacion"),
             "subject" =>$subject,
             "html" => $message,
-            "headers" => array("Content-Type"=> "text/html; charset=iso-8859-1s", "X-Mailin-Tag" => "Impresos")
+            "headers" => array("Content-Type"=> "text/html; charset=iso-8859-1s", "X-Mailin-Tag" => "Impresos-PEMEX-ESTADOS")
         );
 
         /*
