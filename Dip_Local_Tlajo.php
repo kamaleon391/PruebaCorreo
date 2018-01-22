@@ -139,7 +139,9 @@ function recuperaDatos($sql, $titulo, $buscar = array())
               </tr>
               <tr>
                 <td colspan="3">
-                  <a href="'.$urlP.$row['pdf'].'" target="_blank">Ir al PDF</a> &nbsp;  &nbsp; &nbsp;<a href="'.$urlP.$row['jpg'].'.jpg" target="_blank">Ir a la Imagen</a> &nbsp;  &nbsp; &nbsp; Link: <span style="color: blue;text-decoration: underline;">'.$urlP.$row['pdf'].'</span>
+                  <a href="'.$urlP.$row['pdf'].'" target="_blank">Ir al PDF</a> &nbsp;  &nbsp; &nbsp;
+                  <a href="'.$urlP.$row['jpg'].'.jpg" target="_blank">Ir a la Imagen</a>  &nbsp;  &nbsp; &nbsp; 
+                  <a href="'.$urlP.$row['pdf'].'" target="_blank">Link</a> &nbsp;  &nbsp; &nbsp;
                 </td>
               </tr>
                <tr style="height: 10px;">
@@ -270,7 +272,9 @@ mysql_query("SET NAMES 'utf8'");
               </tr>
               <tr>
                 <td colspan="3">
-                  <a href="'.$urlP.$row['pdf'].'" target="_blank">Ir al PDF</a> &nbsp;  &nbsp; &nbsp;<a href="'.$urlP.$row['jpg'].'.jpg" target="_blank">Ir a la Imagen</a> &nbsp;  &nbsp; &nbsp; Link: <span style="color: blue;text-decoration: underline;">'.$urlP.$row['pdf'].'</span>
+                  <a href="'.$urlP.$row['pdf'].'" target="_blank">Ir al PDF</a> &nbsp;  &nbsp; &nbsp;
+                  <a href="'.$urlP.$row['jpg'].'.jpg" target="_blank">Ir a la Imagen</a>  &nbsp;  &nbsp; &nbsp; 
+                  <a href="'.$urlP.$row['pdf'].'" target="_blank">Link</a> &nbsp;  &nbsp; &nbsp;
                 </td>
               </tr>
                <tr style="height: 10px;">
@@ -403,7 +407,9 @@ mysql_query("SET NAMES 'utf8'");
               </tr>
               <tr>
                 <td colspan="3">
-                  <a href="'.$encabezado.'" target="_blank">Ir a la Nota</a> &nbsp;  &nbsp; &nbsp; Link: <span style="color: blue;text-decoration: underline;">'.$encabezado.'</span>
+                  <a href="'.$urlP.$row['pdf'].'" target="_blank">Ir al PDF</a> &nbsp;  &nbsp; &nbsp;
+                  <a href="'.$urlP.$row['jpg'].'.jpg" target="_blank">Ir a la Imagen</a>  &nbsp;  &nbsp; &nbsp; 
+                  <a href="'.$urlP.$row['pdf'].'" target="_blank">Link</a> &nbsp;  &nbsp; &nbsp;
                 </td>
               </tr>
                <tr style="height: 10px;">
@@ -3589,7 +3595,7 @@ echo $mensaje;
   sendinblue($mensaje);
   function sendinblue($message){
 
-      $subject="MONITOREO RVL ".fecha_completa(date("Y-m-d"));
+      $subject="D. 12 Tlajomulco ".fecha_completa(date("Y-m-d"));
       $mailin = new Mailin('https://api.sendinblue.com/v2.0', 'wjSbMAENLm2TGfpW');
       $data   = array(
           "to" => array(
