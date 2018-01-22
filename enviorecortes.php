@@ -115,9 +115,9 @@ $mensaje="<meta charset='utf8' />
 <br><br>
 <div style='text-align: center; font-size: 14px;'>Para más contenido visite su <a href='http://187.247.253.5/siscap.la/public/boards/corpogas'>Sistema de ".utf8_decode('Información')."</a></div>";
 
-sendinblue($mensaje);
 echo ( $mensaje);
 
+sendinblue($mensaje);
 function sendinblue($message){
     $mailin = new Mailin('https://api.sendinblue.com/v2.0', 'wjSbMAENLm2TGfpW');
     $data   = array(
@@ -134,7 +134,7 @@ function sendinblue($message){
     );
 
     /*
-     * ENVIANDO EMAIL...
+     * ENVIANDO EMAIL A CONTACTOS...
      */
    var_dump($mailin->send_email($data));
 }
