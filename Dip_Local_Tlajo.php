@@ -3592,29 +3592,27 @@ $mensaje.='
 
 echo $mensaje;
 
-  sendinblue($mensaje);
-  function sendinblue($message){
+sendinblue($mensaje);
+function sendinblue($message){
 
-      $subject="D. 12 Tlajomulco ".fecha_completa(date("Y-m-d"));
-      $mailin = new Mailin('https://api.sendinblue.com/v2.0', 'wjSbMAENLm2TGfpW');
-      $data   = array(
-          "to" => array(
-                'kamaleon391@gmail.com' => 'Prueba Correo',
-          ),
-          "bcc" => array(
-              "ehb1703@gmail.com" => "Edgar Hernandez",
-          ),
-          "from" => array("gaimpresos@gmail.com", "Ga Comunicacion"),
-          "subject" =>$subject,
-          "html" => $message,
-          "headers" => array("Content-Type"=> "text/html; charset=UTF-8", "X-Mailin-Tag" => "Impresos-PEMEX-ESTADOS")
-      );
+  $subject="D. 12 Tlajomulco".fecha_completa(date("Y-m-d"));
+  $mailin = new Mailin('https://api.sendinblue.com/v2.0', 'wjSbMAENLm2TGfpW');
+  $data   = array(
+      "to" => array(
+            'carloshreyes@gmail.com' => 'Carlos Reyes',
+          	'ehb1703@gmail.com' => 'Edgar Hernandez',
+      ), 
+      "from" => array("gaimpresos@gmail.com", "Ga Comunicacion"),
+      "subject" =>$subject,
+      "html" => $message,
+      "headers" => array("Content-Type"=> "text/html; charset=UTF-8", "X-Mailin-Tag" => "D. 12 Tlajomulco")
+  );
 
-      /*
-       * ENVIANDO EMAIL...
-       */
-      var_dump($mailin->send_email($data));
-  }
+  /*
+   * ENVIANDO EMAIL...
+   */
+  var_dump($mailin->send_email($data));
+}
 
 
 function EncuentraCoincidencias($cadenaOriginal,$valorBuscado){
