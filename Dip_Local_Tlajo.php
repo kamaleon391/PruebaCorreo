@@ -3584,31 +3584,31 @@ $mensaje.='
 //correo($mensaje);
 
 
-	echo $mensaje;
+echo $mensaje;
 
-	sendinblue($mensaje);
-	function sendinblue($message){
+  sendinblue($mensaje);
+  function sendinblue($message){
 
-	  $subject="MONITOREO RVL ".fecha_completa(date("Y-m-d"));
-	  $mailin = new Mailin('https://api.sendinblue.com/v2.0', 'wjSbMAENLm2TGfpW');
-	  $data   = array(
-	      "to" => array(
-	            'kamaleon391@gmail.com' => 'Prueba Correo',
-	      ),
-	      "bcc" => array(
-	          "ehb1703@gmail.com" => "Edgar Hernandez",
-	      ),
-	      "from" => array("gaimpresos@gmail.com", "Ga Comunicacion"),
-	      "subject" =>$subject,
-	      "html" => $message,
-	      "headers" => array("Content-Type"=> "text/html; charset=UTF-8", "X-Mailin-Tag" => "Impresos-PEMEX-ESTADOS")
-	  );
+      $subject="MONITOREO RVL ".fecha_completa(date("Y-m-d"));
+      $mailin = new Mailin('https://api.sendinblue.com/v2.0', 'wjSbMAENLm2TGfpW');
+      $data   = array(
+          "to" => array(
+                'kamaleon391@gmail.com' => 'Prueba Correo',
+          ),
+          "bcc" => array(
+              "ehb1703@gmail.com" => "Edgar Hernandez",
+          ),
+          "from" => array("gaimpresos@gmail.com", "Ga Comunicacion"),
+          "subject" =>$subject,
+          "html" => $message,
+          "headers" => array("Content-Type"=> "text/html; charset=UTF-8", "X-Mailin-Tag" => "Impresos-PEMEX-ESTADOS")
+      );
 
-	  /*
-	   * ENVIANDO EMAIL...
-	   */
-	  var_dump($mailin->send_email($data));
-	}
+      /*
+       * ENVIANDO EMAIL...
+       */
+      var_dump($mailin->send_email($data));
+  }
 
 
 function EncuentraCoincidencias($cadenaOriginal,$valorBuscado){
@@ -3715,8 +3715,8 @@ function correctorOrtografico($cadena)
     $i = 0;
     while($rows = mysql_fetch_array($palabras))
     {
-        $correctas[$i]=utf8_decode($rows['Correcto']);
-        $incorrectas[$i]=utf8_decode($rows['Incorrecto']);
+        $correctas[$i]=($rows['Correcto']);
+        $incorrectas[$i]=($rows['Incorrecto']);
         $i++;
     }
 
@@ -3752,7 +3752,7 @@ function fecha_completa($fecha)
        break;
 
        case "3":   // Bloque 1
-         $dia_sem3='Miércoles';
+         $dia_sem3='Miercoles';
        break;
 
        case "4":   // Bloque 1
@@ -3764,7 +3764,7 @@ function fecha_completa($fecha)
        break;
 
        case "6":   // Bloque 1
-         $dia_sem3='Sábado';
+         $dia_sem3='Sabado';
        break;
 
       default:   // Bloque 3
