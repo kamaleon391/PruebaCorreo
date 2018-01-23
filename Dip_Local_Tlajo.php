@@ -3599,8 +3599,9 @@ function sendinblue($message){
   $mailin = new Mailin('https://api.sendinblue.com/v2.0', 'wjSbMAENLm2TGfpW');
   $data   = array(
       "to" => array(
-            'carloshreyes@gmail.com' => 'Carlos Reyes',
-          	'ehb1703@gmail.com' => 'Edgar Hernandez',
+ //           'carloshreyes@gmail.com' => 'Carlos Reyes',
+ //         	'ehb1703@gmail.com' => 'Edgar Hernandez',
+      	'kamaleon391@gmail.com' => 'Prueba',
       ), 
       "from" => array("gaimpresos@gmail.com", "Ga Comunicacion"),
       "subject" =>$subject,

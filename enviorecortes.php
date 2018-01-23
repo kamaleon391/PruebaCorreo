@@ -14,7 +14,7 @@ $mensaje="<meta charset='utf8' />
         border-bottom: 1pt solid black;
     }
 </style>
-<table width='900px' align='center' cellspacing='0' border='0' style='font-size: 13px;border: solid 1px gray;'>
+<table width='500px' align='center' cellspacing='0' border='0' style='font-size: 13px;border: solid 1px gray;'>
   <tr>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -96,6 +96,15 @@ $mensaje="<meta charset='utf8' />
         <a href='http://187.247.253.5/external/testigos/pemex/columnasfinancieras/$fecha/compendio/$fecha.pdf'>".('Clic Aquí')."</a>
   </tr>";
 
+  $mensaje .="
+  <tr>
+    <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >Información General</td>
+    <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >&nbsp;</td>
+    <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >
+        <a href='http://187.247.253.5/external/testigos/pemex/infogeneral/$fecha/compendio/$fecha.pdf'>".('Clic Aquí')."</a>
+  </tr>";
+
+
   $mensaje .= "
   <tr>
     <td style='border-bottom: 1pt solid rgb(230, 230, 230);' >Cartones</td>
@@ -113,11 +122,11 @@ $mensaje="<meta charset='utf8' />
 </tr>
 </table>
 <br><br>
-<div style='text-align: center; font-size: 14px;'>Para más contenido visite su <a href='http://187.247.253.5/siscap.la/public/boards/corpogas'>Sistema de ".utf8_decode('Información')."</a></div>";
+<div style='text-align: center; font-size: 14px;'>Para más contenido visite su <a href='http://187.247.253.5/siscap.la/public/boards/corpogas'>Sistema de Información</a></div>";
 
+//sendinblue($mensaje);
 echo ( $mensaje);
 
-sendinblue($mensaje);
 function sendinblue($message){
     $mailin = new Mailin('https://api.sendinblue.com/v2.0', 'wjSbMAENLm2TGfpW');
     $data   = array(
@@ -134,7 +143,7 @@ function sendinblue($message){
     );
 
     /*
-     * ENVIANDO EMAIL A CONTACTOS...
+     * ENVIANDO EMAIL...
      */
    var_dump($mailin->send_email($data));
 }
